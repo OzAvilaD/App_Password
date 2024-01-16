@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- iconos de google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+
+    <!-- hoja de Estilos -->
+    <link rel="stylesheet" href="style.css">
+    <title>Generador de Contraseñas</title>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Generador de Contraseñas</h2>
+        <!-- DONDE SE  MOSTRARA LA CONTRASEÑA Y SE PODRA COPIAR  -->
+        <div class="capa">
+            <div class="input-box">
+                <input type="text" value="John" disabled>
+                <span class="material-symbols-rounded">
+                            copy_all
+                </span>
+            </div>
+            <div class="pass_indicador" ><p>H4FDDFD</p></div>
+            <!-- CONFIGURACION DEL LARGO DE LA CONTRASEÑA -->
+            <div class="largo">
+                <div class="detalles">
+                    <label class="titulo">
+                        Largo de Contraseña
+                    </label>
+                    <span></span>
+                </div>
+                <input type="range" min="1" max="30" value="15" step="1">
+            </div>
+            <!-- LOS CONFIGURACIONES QUE TENDRA EJ(MAYUSCULAS,MINUSCULAS, NUMEROS, ETC) -->
+            <div class="configuracio">
+                <label for="" class="titulo"></label>
+                <ul class="opciones">
+                    <li class="opcion">
+                        <input type="checkbox" id="minuscula" checked>
+                        <label for="minuscula">Minusculas (a-z)</label>
+                    </li>
+                    <li class="opcion">
+                        <input type="checkbox" id="mayusculas" >
+                        <label for="mayusculas">Mayusculas (A-Z)</label>
+                    </li>
+                    <li class="opcion">
+                        <input type="checkbox" id="numero" >
+                        <label for="numero">Numeros (0-9)</label>
+                    </li>
+                    <li class="opcion">
+                        <input type="checkbox" id="simbolo" >
+                        <label for="simbolo">Simbolos (!-%$#+)</label>
+                    </li>
+                    <li class="opcion">
+                        <input type="checkbox" id="sin_duplicado" >
+                        <label for="sin_duplicado">Sin Duplicado</label>
+                    </li>
+                    <li class="opcion">
+                        <input type="checkbox" id="con_espacio" >
+                        <label for="con_espacio">Con Espacios</label>
+                    </li>
+                </ul>
+            </div>
+            </div>
+
+            
+            <button class="generate-btn">Generar Contraseña</button>
+        </div>
+        
+    </div>
+
+
+
+    <link rel="stylesheet" href="script.js">
+</body>
+</html>
