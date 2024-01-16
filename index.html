@@ -15,14 +15,15 @@
     <div class="container">
         <h2>Generador de Contraseñas</h2>
         <!-- DONDE SE  MOSTRARA LA CONTRASEÑA Y SE PODRA COPIAR  -->
-        <div class="capa">
-            <div class="input-box">
-                <input type="text" value="John" disabled>
-                <span class="material-symbols-rounded">
-                            copy_all
-                </span>
+        <div class="wrapper">
+            
+            <div class="input_box">
+                <input type="text"  disabled>
+                <span class="material-symbols-rounded">copy_all</span>
             </div>
-            <div class="pass_indicador" ><p>H4FDDFD</p></div>
+
+            <div class="pass_indicador">66</div>
+
             <!-- CONFIGURACION DEL LARGO DE LA CONTRASEÑA -->
             <div class="largo">
                 <div class="detalles">
@@ -33,40 +34,40 @@
                 </div>
                 <input type="range" min="1" max="30" value="15" step="1">
             </div>
+
             <!-- LOS CONFIGURACIONES QUE TENDRA EJ(MAYUSCULAS,MINUSCULAS, NUMEROS, ETC) -->
-            <div class="configuracio">
-                <label for="" class="titulo"></label>
+            <div class="configuracion">
+                <label class="titulo">Configuracion</label>
                 <ul class="opciones">
                     <li class="opcion">
-                        <input type="checkbox" id="minuscula" checked>
-                        <label for="minuscula">Minusculas (a-z)</label>
+                        <input type="checkbox" id="minusculas" checked>
+                        <label for="minusculas">Minusculas (a-z)</label>
                     </li>
                     <li class="opcion">
                         <input type="checkbox" id="mayusculas" >
                         <label for="mayusculas">Mayusculas (A-Z)</label>
                     </li>
                     <li class="opcion">
-                        <input type="checkbox" id="numero" >
-                        <label for="numero">Numeros (0-9)</label>
+                        <input type="checkbox" id="numeros" >
+                        <label for="numeros">Numeros (0-9)</label>
                     </li>
                     <li class="opcion">
-                        <input type="checkbox" id="simbolo" >
-                        <label for="simbolo">Simbolos (!-%$#+)</label>
+                        <input type="checkbox" id="simbolos" >
+                        <label for="simbolos">Simbolos (!-%$#+)</label>
                     </li>
                     <li class="opcion">
-                        <input type="checkbox" id="sin_duplicado" >
-                        <label for="sin_duplicado">Sin Duplicado</label>
+                        <input type="checkbox" id="sin_duplicados" >
+                        <label for="sin_duplicados">Sin Duplicados</label>
                     </li>
                     <li class="opcion">
-                        <input type="checkbox" id="con_espacio" >
-                        <label for="con_espacio">Con Espacios</label>
+                        <input type="checkbox" id="con_espacios" >
+                        <label for="con_espacios">Con Espacios</label>
                     </li>
                 </ul>
             </div>
-            </div>
 
             
-            <button class="generate-btn">Generar Contraseña</button>
+            <button class="generador_btn">Generar Contraseña</button>
         </div>
         
     </div>

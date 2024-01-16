@@ -19,8 +19,9 @@ body {
     width: 450px;
     background-color: #e3f2fd;
     border-radius: 10px;
-    box-shadow:  0 10px 100px #686963 ;
+    box-shadow:  0 10px 50px #686963 ;
 }
+
 
 .container h2 {
     font-weight: 600;
@@ -29,22 +30,23 @@ body {
     border-bottom: 1px solid #fafafa;
 }
 
-.capa {
-    margin: 1.25re, 1.75rem;
+
+.wrapper{
+    margin: 1.25rem 1.75rem;
 }
 
 /* AREA DE COPIADO Y MUESTRA DE CONTRASEÑA */
 
-.capa .input-box {
+.wrapper .input_box {
     position: relative;
 }
 
-.input-box input {
+.input_box input{
     width: 100%;
     height: 53px;
     color: #686963;
-    background-color: #fafafa;
-    font-size: 1.1rem;
+    background-color: white;
+    font-size: 1.06rem;
     font-weight: 500;
     border-radius: 4px;
     letter-spacing: 1.5px;
@@ -52,7 +54,7 @@ body {
     padding: 0 2.85rem 0 1rem;
 }
 
-.input-box span{
+.input_box span{
     position: absolute;
     right: 13px;
     cursor: pointer;
@@ -60,11 +62,11 @@ body {
     color:#686963;
 }
 
-.input-box span:hover{
+.input_box span:hover{
     color: #61e786  !important;
 }
 
-.capa .pass_indicador{
+.wrapper .pass_indicador{
     width: 100%;
     height: 4px;
     position: relative;
@@ -72,7 +74,7 @@ body {
     border-radius: 25px;
 }
 
-/* AREA LARGO DE PASSWOR*/
+/* AREA LARGO DE PASSWOR */
 
 .pass_indicador::before{
     position: absolute;
@@ -80,5 +82,82 @@ body {
     height: 100%;
     width: 50%;
     border-radius: inherit;
-    transition: width 0.3s ease-out;
+    transition: width 0.3s ease;
 }
+
+.pass_indicador#weak::before{
+    width: 20%;
+    background-color: red;
+}
+
+.pass_indicador#medium::before{
+    width: 20%;
+    background-color: yellow;
+}
+
+.pass_indicador#strong::before{
+    width: 20%;
+    background-color: green;
+}
+
+.wrapper .largo {
+    margin: 1.56rem 0 1.25rem;
+}
+
+.largo .detalles{
+    display: flex;
+    justify-content: space-between;
+}
+
+.largo input{
+    width: 100%;
+    height: 5px;
+}
+
+.configuracion .opciones{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.configuracion .opcion{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: calc(100%/2);
+} 
+
+.opciones .opcion:first-child{
+    pointer-events: none;
+}
+
+.opciones .opcion:first-child input{
+    opacity: 0.7;
+}
+
+.opciones .opcion input {
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+}
+
+.opciones .opcion label{
+    cursor: pointer;
+    color: black;
+    padding-left: 0.63rem;
+}
+
+.wrapper .generador_btn{
+    width: 100%;
+    color: white;
+    background-color: #03254e;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0.9rem 0;
+    border-radius: 15px;
+    margin: 0.9rem 0 1.3rem;
+}
+
