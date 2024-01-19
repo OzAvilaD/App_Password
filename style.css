@@ -31,13 +31,13 @@ body {
 }
 
 
-.wrapper{
+.capa{
     margin: 1.25rem 1.75rem;
 }
 
 /* AREA DE COPIADO Y MUESTRA DE CONTRASEÑA */
 
-.wrapper .input_box {
+.capa .input_box {
     position: relative;
 }
 
@@ -66,7 +66,7 @@ body {
     color: #61e786  !important;
 }
 
-.wrapper .pass_indicador{
+.capa .pass_indicador{
     width: 100%;
     height: 4px;
     position: relative;
@@ -91,16 +91,16 @@ body {
 }
 
 .pass_indicador#medium::before{
-    width: 20%;
+    width: 50%;
     background-color: yellow;
 }
 
 .pass_indicador#strong::before{
-    width: 20%;
+    width: 100%;
     background-color: green;
 }
 
-.wrapper .largo {
+.capa .largo {
     margin: 1.56rem 0 1.25rem;
 }
 
@@ -148,16 +148,17 @@ body {
     padding-left: 0.63rem;
 }
 
-.wrapper .generador_btn{
+.capa .generador_btn{
     width: 100%;
     color: white;
     background-color: #03254e;
     border: none;
     outline: none;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.05rem;
     padding: 0.9rem 0;
     border-radius: 15px;
     margin: 1rem 0 1.3rem;
+    text-transform: uppercase;
 }
 
