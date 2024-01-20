@@ -53,6 +53,8 @@ const updateSlider = () => {
 }
 updateSlider();
 
+// copiar con el icono
+
 const copyPassword = () => {
     navigator.clipboard.writeText(passwordInput.value);
     copyIcon.innerText = "check";
