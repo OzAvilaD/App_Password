@@ -5,6 +5,7 @@ const passwordInput = document.querySelector(".input_box input");
 const passIndicator = document.querySelector(".pass_indicador");
 const generateBtn = document.querySelector(".generador_btn");
 
+// DICCIONARIO DE CARACTERES A UTILIZAR
 const characters = {
     minusculas: "abcdefghijklmnopqrstuvwxyz",
     mayusculas: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
@@ -12,6 +13,7 @@ const characters = {
     simbolos: "!$%&|[](){}:;.,*+-#@<>~"
 }
 
+// GENERAR PASSWORD ALEATORIA
 const generatePassword = () => {
     let staticPassword = "",
         randomPassword = "",
@@ -42,6 +44,7 @@ const generatePassword = () => {
 
 }
 
+// FUNCIONALIDAD BARRA DE CALIDAD DE CONTRASEÑA
 const updatePassIndicator = () => {
     passIndicator.id = lengthSlider.value <= 8 ? "weak" : lengthSlider.value <= 16 ? "medium" : "strong";
 }
@@ -53,10 +56,11 @@ const updateSlider = () => {
 }
 updateSlider();
 
-// copiar con el icono
+//METODO COMPIAR AL PORTAPAPELES 
 
 const copyPassword = () => {
     navigator.clipboard.writeText(passwordInput.value);
+    console.log(passwordInput.value);
     copyIcon.innerText = "check";
     copyIcon.style.color = "#4285f4";
     setTimeout(() => {
@@ -64,6 +68,7 @@ const copyPassword = () => {
         copyIcon.style.color = "#707070";
     }, 1500);
 }
+
 
 copyIcon.addEventListener("click", copyPassword);
 lengthSlider.addEventListener("input", updateSlider);
